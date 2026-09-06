@@ -257,9 +257,12 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 12px;
   }
 
-  /* 取消屏幕版的大留白，让内容铺满纸面 */
-  .hero, .shelf, .about { max-width: none; padding: 8px 0; }
+  /* 取消屏幕版的大留白，仅保留纸面左右安全边距 */
+  .hero, .shelf, .about { max-width: none; padding: 8px 16px; }
 
   /* 链接打印出来没有可点击性，颜色回归正文并去下划线 */
   .main-nav a, .logo { color: #000; text-decoration: none; }
+
+  /* 评分星与类型标签的颜色在黑白打印下保持可读 */
+  .stars, .stat strong { color: #000; }
 }
