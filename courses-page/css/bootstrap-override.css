@@ -1,0 +1,11 @@
+/* 自定义样式必须在 Bootstrap 之后加载才能覆盖框架样式 */
+
+/* 覆盖示例：让卡片标题统一品牌色 */
+.card .card-title {
+  color: #0b5ed7;
+}
+
+/* 用自定义类微调品牌区，不改框架类名 */
+.navbar .navbar-brand {
+  font-weight: 700;
+}
