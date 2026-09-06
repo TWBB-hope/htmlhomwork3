@@ -126,7 +126,7 @@ img { max-width: 100%; height: auto; }
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
 }
 
@@ -197,4 +197,24 @@ img { max-width: 100%; height: auto; }
   text-align: center;
   color: var(--text-soft);
   font-size: 14px;
+}
+
+/* ========= 第二阶段：媒体查询逐档增强 =========
+   断点定在布局开始变坏处：768px 起单列卡片开始显空、
+   标题比例失衡；992px 起内容需要更大留白与卡片内距 */
+
+@media (min-width: 768px) {
+  .hero { padding-top: 64px; }
+  .hero-title { font-size: 40px; }
+  .section-title { font-size: 24px; }
+  .shelf, .about { padding-top: 32px; }
+  .stats { padding-bottom: 16px; }
+}
+
+@media (min-width: 992px) {
+  .hero { padding-top: 88px; }
+  .hero-title { font-size: 44px; }
+  .card-grid { gap: 20px; }
+  .pick-card { padding: 24px; }
+  .shelf, .about { padding-top: 40px; padding-bottom: 16px; }
 }
